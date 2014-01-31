@@ -17,12 +17,12 @@
 # define signal sigset
 #endif
 
-   /* sun's sys/ioctl.h redefines symbols from termio world */
+/* sun's sys/ioctl.h redefines symbols from termio world */
 #if defined(HAVE_SYS_IOCTL_H) && !defined(sun)
 # include <sys/ioctl.h>
 #endif
 
-#ifndef USE_SYSTEM	/* use fork/exec to start the shell */
+#ifndef USE_SYSTEM      /* use fork/exec to start the shell */
 
 # if defined(HAVE_SYS_WAIT_H) || defined(HAVE_UNION_WAIT)
 #  include <sys/wait.h>
@@ -75,7 +75,7 @@
  * problem? Include it here. -- Slootman
  */
 # if defined(HAVE_LIMITS_H) && !defined(_LIMITS_H)
-#  include <limits.h>		/* for SYS_NMLN (Sinix 5.41 / Unix SysV.4) */
+#  include <limits.h>           /* for SYS_NMLN (Sinix 5.41 / Unix SysV.4) */
 # endif
 
 /* Define SYS_NMLN ourselves if it still isn't defined (for CrayT3E). */
@@ -83,7 +83,7 @@
 #  define SYS_NMLN 32
 # endif
 
-# include <sys/systeminfo.h>	/* for sysinfo */
+# include <sys/systeminfo.h>    /* for sysinfo */
 #endif
 
 /*
@@ -105,8 +105,8 @@
 #endif
 
 #ifdef HAVE_SYS_PTEM_H
-# include <sys/ptem.h>	/* must be after termios.h for Sinix */
-# ifndef _IO_PTEM_H	/* For UnixWare that should check for _IO_PT_PTEM_H */
+# include <sys/ptem.h>  /* must be after termios.h for Sinix */
+# ifndef _IO_PTEM_H     /* For UnixWare that should check for _IO_PT_PTEM_H */
 #  define _IO_PTEM_H
 # endif
 #endif
@@ -114,12 +114,9 @@
 /* shared library access */
 #if defined(HAVE_DLFCN_H) && defined(USE_DLOPEN)
 # ifdef __MVS__
-    /* needed to define RTLD_LAZY (Anthony Giorgio) */
+/* needed to define RTLD_LAZY (Anthony Giorgio) */
 #  define __SUSV3
 # endif
 # include <dlfcn.h>
 #else
-# if defined(HAVE_DL_H) && defined(HAVE_SHL_LOAD)
-#  include <dl.h>
-# endif
 #endif

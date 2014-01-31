@@ -10,7 +10,9 @@ void set_internal_string_var __ARGS((char_u *name, char_u *value));
 int var_redir_start __ARGS((char_u *name, int append));
 void var_redir_str __ARGS((char_u *value, int value_len));
 void var_redir_stop __ARGS((void));
-int eval_charconvert __ARGS((char_u *enc_from, char_u *enc_to, char_u *fname_from, char_u *fname_to));
+int eval_charconvert __ARGS((char_u *enc_from, char_u *enc_to, char_u *
+                             fname_from,
+                             char_u *fname_to));
 int eval_printexpr __ARGS((char_u *fname, char_u *args));
 void eval_diff __ARGS((char_u *origfile, char_u *newfile, char_u *outfile));
 void eval_patch __ARGS((char_u *origfile, char_u *difffile, char_u *outfile));
@@ -18,12 +20,15 @@ int eval_to_bool __ARGS((char_u *arg, int *error, char_u **nextcmd, int skip));
 char_u *eval_to_string_skip __ARGS((char_u *arg, char_u **nextcmd, int skip));
 int skip_expr __ARGS((char_u **pp));
 char_u *eval_to_string __ARGS((char_u *arg, char_u **nextcmd, int convert));
-char_u *eval_to_string_safe __ARGS((char_u *arg, char_u **nextcmd, int use_sandbox));
+char_u *eval_to_string_safe __ARGS((char_u *arg, char_u **nextcmd,
+                                    int use_sandbox));
 int eval_to_number __ARGS((char_u *expr));
 list_T *eval_spell_expr __ARGS((char_u *badword, char_u *expr));
 int get_spellword __ARGS((list_T *list, char_u **pp));
 typval_T *eval_expr __ARGS((char_u *arg, char_u **nextcmd));
-int call_vim_function __ARGS((char_u *func, int argc, char_u **argv, int safe, int str_arg_only, typval_T *rettv));
+int call_vim_function __ARGS((char_u *func, int argc, char_u **argv, int safe,
+                              int str_arg_only,
+                              typval_T *rettv));
 long call_func_retnr __ARGS((char_u *func, int argc, char_u **argv, int safe));
 void *call_func_retstr __ARGS((char_u *func, int argc, char_u **argv, int safe));
 void *call_func_retlist __ARGS((char_u *func, int argc, char_u **argv, int safe));
@@ -38,7 +43,8 @@ void list_rem_watch __ARGS((list_T *l, listwatch_T *lwrem));
 void *eval_for_line __ARGS((char_u *arg, int *errp, char_u **nextcmdp, int skip));
 int next_for_item __ARGS((void *fi_void, char_u *arg));
 void free_for_info __ARGS((void *fi_void));
-void set_context_for_expression __ARGS((expand_T *xp, char_u *arg, cmdidx_T cmdidx));
+void set_context_for_expression __ARGS((expand_T *xp, char_u *arg,
+                                        cmdidx_T cmdidx));
 void ex_call __ARGS((exarg_T *eap));
 void ex_unlet __ARGS((exarg_T *eap));
 void ex_lockvar __ARGS((exarg_T *eap));
@@ -78,11 +84,15 @@ char_u *get_dict_string __ARGS((dict_T *d, char_u *key, int save));
 long get_dict_number __ARGS((dict_T *d, char_u *key));
 char_u *get_function_name __ARGS((expand_T *xp, int idx));
 char_u *get_expr_name __ARGS((expand_T *xp, int idx));
-int func_call __ARGS((char_u *name, typval_T *args, dict_T *selfdict, typval_T *rettv));
+int func_call __ARGS((char_u *name, typval_T *args, dict_T *selfdict,
+                      typval_T *rettv));
 void dict_extend __ARGS((dict_T *d1, dict_T *d2, char_u *action));
 void mzscheme_call_vim __ARGS((char_u *name, typval_T *args, typval_T *rettv));
 float_T vim_round __ARGS((float_T f));
-long do_searchpair __ARGS((char_u *spat, char_u *mpat, char_u *epat, int dir, char_u *skip, int flags, pos_T *match_pos, linenr_T lnum_stop, long time_limit));
+long do_searchpair __ARGS((char_u *spat, char_u *mpat, char_u *epat, int dir,
+                           char_u *skip, int flags, pos_T *match_pos,
+                           linenr_T lnum_stop,
+                           long time_limit));
 void set_vim_var_nr __ARGS((int idx, long val));
 long get_vim_var_nr __ARGS((int idx));
 char_u *get_vim_var_str __ARGS((int idx));
@@ -132,6 +142,9 @@ void write_viminfo_varlist __ARGS((FILE *fp));
 int store_session_globals __ARGS((FILE *fd));
 void last_set_msg __ARGS((scid_T scriptID));
 void ex_oldfiles __ARGS((exarg_T *eap));
-int modify_fname __ARGS((char_u *src, int *usedlen, char_u **fnamep, char_u **bufp, int *fnamelen));
-char_u *do_string_sub __ARGS((char_u *str, char_u *pat, char_u *sub, char_u *flags));
+int modify_fname __ARGS((char_u *src, int *usedlen, char_u **fnamep, char_u *
+                         *bufp,
+                         int *fnamelen));
+char_u *do_string_sub __ARGS((char_u *str, char_u *pat, char_u *sub,
+                              char_u *flags));
 /* vim: set ft=c : */

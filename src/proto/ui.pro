@@ -19,7 +19,8 @@ int clip_isautosel_star __ARGS((void));
 int clip_isautosel_plus __ARGS((void));
 void clip_modeless __ARGS((int button, int is_click, int is_drag));
 void clip_start_selection __ARGS((int col, int row, int repeated_click));
-void clip_process_selection __ARGS((int button, int col, int row, int_u repeated_click));
+void clip_process_selection __ARGS((int button, int col, int row,
+                                    int_u repeated_click));
 void clip_may_redraw_selection __ARGS((int row, int col, int len));
 void clip_clear_selection __ARGS((VimClipboard *cbd));
 void clip_may_clear_selection __ARGS((int row1, int row2));
@@ -49,7 +50,8 @@ int check_row __ARGS((int row));
 void open_app_context __ARGS((void));
 void x11_setup_atoms __ARGS((Display *dpy));
 void x11_setup_selection __ARGS((Widget w));
-void clip_x11_request_selection __ARGS((Widget myShell, Display *dpy, VimClipboard *cbd));
+void clip_x11_request_selection __ARGS((Widget myShell, Display *dpy,
+                                        VimClipboard *cbd));
 void clip_x11_lose_selection __ARGS((Widget myShell, VimClipboard *cbd));
 int clip_x11_own_selection __ARGS((Widget myShell, VimClipboard *cbd));
 void clip_x11_set_selection __ARGS((VimClipboard *cbd));

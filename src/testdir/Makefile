@@ -2,7 +2,7 @@
 # Makefile to run all tests for Vim
 #
 
-VIMPROG = ../vim
+VIMPROG = ../../build/src/vim
 
 # Uncomment this line to use valgrind for memory leaks and extra warnings.
 #   The output goes into a file "valgrind.testN"

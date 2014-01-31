@@ -27,7 +27,8 @@ int valid_tabpage __ARGS((tabpage_T *tpc));
 tabpage_T *find_tabpage __ARGS((int n));
 int tabpage_index __ARGS((tabpage_T *ftp));
 void goto_tabpage __ARGS((int n));
-void goto_tabpage_tp __ARGS((tabpage_T *tp, int trigger_enter_autocmds, int trigger_leave_autocmds));
+void goto_tabpage_tp __ARGS((tabpage_T *tp, int trigger_enter_autocmds,
+                             int trigger_leave_autocmds));
 void goto_tabpage_win __ARGS((tabpage_T *tp, win_T *wp));
 void tabpage_move __ARGS((int nr));
 void win_goto __ARGS((win_T *wp));
@@ -59,9 +60,14 @@ void command_height __ARGS((void));
 void last_status __ARGS((int morewin));
 int tabline_height __ARGS((void));
 char_u *grab_file_name __ARGS((long count, linenr_T *file_lnum));
-char_u *file_name_at_cursor __ARGS((int options, long count, linenr_T *file_lnum));
-char_u *file_name_in_line __ARGS((char_u *line, int col, int options, long count, char_u *rel_fname, linenr_T *file_lnum));
-char_u *find_file_name_in_path __ARGS((char_u *ptr, int len, int options, long count, char_u *rel_fname));
+char_u *file_name_at_cursor __ARGS((int options, long count,
+                                    linenr_T *file_lnum));
+char_u *file_name_in_line __ARGS((char_u *line, int col, int options,
+                                  long count, char_u *rel_fname,
+                                  linenr_T *file_lnum));
+char_u *find_file_name_in_path __ARGS((char_u *ptr, int len, int options,
+                                       long count,
+                                       char_u *rel_fname));
 int path_with_url __ARGS((char_u *fname));
 int vim_isAbsName __ARGS((char_u *name));
 int vim_FullName __ARGS((char_u *fname, char_u *buf, int len, int force));
@@ -70,8 +76,11 @@ int only_one_window __ARGS((void));
 void check_lnums __ARGS((int do_curwin));
 void make_snapshot __ARGS((int idx));
 void restore_snapshot __ARGS((int idx, int close_curwin));
-int switch_win __ARGS((win_T **save_curwin, tabpage_T **save_curtab, win_T *win, tabpage_T *tp, int no_display));
-void restore_win __ARGS((win_T *save_curwin, tabpage_T *save_curtab, int no_display));
+int switch_win __ARGS((win_T **save_curwin, tabpage_T **save_curtab, win_T *win,
+                       tabpage_T *tp,
+                       int no_display));
+void restore_win __ARGS((win_T *save_curwin, tabpage_T *save_curtab,
+                         int no_display));
 void switch_buffer __ARGS((buf_T **save_curbuf, buf_T *buf));
 void restore_buffer __ARGS((buf_T *save_curbuf));
 int win_hasvertsplit __ARGS((void));

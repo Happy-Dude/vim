@@ -6,19 +6,25 @@ void buf_clear_file __ARGS((buf_T *buf));
 void buf_freeall __ARGS((buf_T *buf, int flags));
 void goto_buffer __ARGS((exarg_T *eap, int start, int dir, int count));
 void handle_swap_exists __ARGS((buf_T *old_curbuf));
-char_u *do_bufdel __ARGS((int command, char_u *arg, int addr_count, int start_bnr, int end_bnr, int forceit));
+char_u *do_bufdel __ARGS((int command, char_u *arg, int addr_count,
+                          int start_bnr, int end_bnr,
+                          int forceit));
 int do_buffer __ARGS((int action, int start, int dir, int count, int forceit));
 void set_curbuf __ARGS((buf_T *buf, int action));
 void enter_buffer __ARGS((buf_T *buf));
 void do_autochdir __ARGS((void));
-buf_T *buflist_new __ARGS((char_u *ffname, char_u *sfname, linenr_T lnum, int flags));
+buf_T *buflist_new __ARGS((char_u *ffname, char_u *sfname, linenr_T lnum,
+                           int flags));
 void free_buf_options __ARGS((buf_T *buf, int free_p_ff));
 int buflist_getfile __ARGS((int n, linenr_T lnum, int options, int forceit));
 void buflist_getfpos __ARGS((void));
 buf_T *buflist_findname_exp __ARGS((char_u *fname));
 buf_T *buflist_findname __ARGS((char_u *ffname));
-int buflist_findpat __ARGS((char_u *pattern, char_u *pattern_end, int unlisted, int diffmode, int curtab_only));
-int ExpandBufnames __ARGS((char_u *pat, int *num_file, char_u ***file, int options));
+int buflist_findpat __ARGS((char_u *pattern, char_u *pattern_end, int unlisted,
+                            int diffmode,
+                            int curtab_only));
+int ExpandBufnames __ARGS((char_u *pat, int *num_file, char_u ***file,
+                           int options));
 buf_T *buflist_findnr __ARGS((int nr));
 char_u *buflist_nr2name __ARGS((int n, int fullname, int helptail));
 void get_winopts __ARGS((buf_T *buf));
@@ -41,7 +47,10 @@ void col_print __ARGS((char_u *buf, size_t buflen, int col, int vcol));
 void maketitle __ARGS((void));
 void resettitle __ARGS((void));
 void free_titles __ARGS((void));
-int build_stl_str_hl __ARGS((win_T *wp, char_u *out, size_t outlen, char_u *fmt, int use_sandbox, int fillchar, int maxwidth, struct stl_hlrec *hltab, struct stl_hlrec *tabtab));
+int build_stl_str_hl __ARGS((win_T *wp, char_u *out, size_t outlen, char_u *fmt,
+                             int use_sandbox, int fillchar, int maxwidth,
+                             struct stl_hlrec *hltab,
+                             struct stl_hlrec *tabtab));
 void get_rel_pos __ARGS((win_T *wp, char_u *buf, int buflen));
 char_u *fix_fname __ARGS((char_u *fname));
 void fname_expand __ARGS((buf_T *buf, char_u **ffname, char_u **sfname));
@@ -64,7 +73,8 @@ int buf_signcount __ARGS((buf_T *buf, linenr_T lnum));
 void buf_delete_signs __ARGS((buf_T *buf));
 void buf_delete_all_signs __ARGS((void));
 void sign_list_placed __ARGS((buf_T *rbuf));
-void sign_mark_adjust __ARGS((linenr_T line1, linenr_T line2, long amount, long amount_after));
+void sign_mark_adjust __ARGS((linenr_T line1, linenr_T line2, long amount,
+                              long amount_after));
 void set_buflisted __ARGS((int on));
 int buf_contents_changed __ARGS((buf_T *buf));
 void wipe_buffer __ARGS((buf_T *buf, int aucmd));

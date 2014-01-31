@@ -7,7 +7,8 @@ int cause_errthrow __ARGS((char_u *mesg, int severe, int *ignore));
 void free_global_msglist __ARGS((void));
 void do_errthrow __ARGS((struct condstack *cstack, char_u *cmdname));
 int do_intthrow __ARGS((struct condstack *cstack));
-char_u *get_exception_string __ARGS((void *value, int type, char_u *cmdname, int *should_free));
+char_u *get_exception_string __ARGS((void *value, int type, char_u *cmdname,
+                                     int *should_free));
 void discard_current_exception __ARGS((void));
 void report_make_pending __ARGS((int pending, void *value));
 void report_resume_pending __ARGS((int pending, void *value));
@@ -27,8 +28,11 @@ void ex_finally __ARGS((exarg_T *eap));
 void ex_endtry __ARGS((exarg_T *eap));
 void enter_cleanup __ARGS((cleanup_T *csp));
 void leave_cleanup __ARGS((cleanup_T *csp));
-int cleanup_conditionals __ARGS((struct condstack *cstack, int searched_cond, int inclusive));
-void rewind_conditionals __ARGS((struct condstack *cstack, int idx, int cond_type, int *cond_level));
+int cleanup_conditionals __ARGS((struct condstack *cstack, int searched_cond,
+                                 int inclusive));
+void rewind_conditionals __ARGS((struct condstack *cstack, int idx,
+                                 int cond_type,
+                                 int *cond_level));
 void ex_endfunction __ARGS((exarg_T *eap));
 int has_loop_cmd __ARGS((char_u *p));
 /* vim: set ft=c : */

@@ -18,13 +18,19 @@ void free_string_option __ARGS((char_u *p));
 void clear_string_option __ARGS((char_u **pp));
 void set_term_option_alloced __ARGS((char_u **p));
 int was_set_insecurely __ARGS((char_u *opt, int opt_flags));
-void set_string_option_direct __ARGS((char_u *name, int opt_idx, char_u *val, int opt_flags, int set_sid));
+void set_string_option_direct __ARGS((char_u *name, int opt_idx, char_u *val,
+                                      int opt_flags,
+                                      int set_sid));
 char_u *check_colorcolumn __ARGS((win_T *wp));
 char_u *check_stl_option __ARGS((char_u *s));
-int get_option_value __ARGS((char_u *name, long *numval, char_u **stringval, int opt_flags));
-int get_option_value_strict __ARGS((char_u *name, long *numval, char_u **stringval, int opt_type, void *from));
+int get_option_value __ARGS((char_u *name, long *numval, char_u **stringval,
+                             int opt_flags));
+int get_option_value_strict __ARGS((char_u *name, long *numval, char_u *
+                                    *stringval, int opt_type,
+                                    void *from));
 char_u *option_iter_next __ARGS((void **option, int opt_type));
-char_u *set_option_value __ARGS((char_u *name, long number, char_u *string, int opt_flags));
+char_u *set_option_value __ARGS((char_u *name, long number, char_u *string,
+                                 int opt_flags));
 char_u *get_term_code __ARGS((char_u *tname));
 char_u *get_highlight_default __ARGS((void));
 char_u *get_encoding_default __ARGS((void));
@@ -47,7 +53,8 @@ void reset_modifiable __ARGS((void));
 void set_iminsert_global __ARGS((void));
 void set_imsearch_global __ARGS((void));
 void set_context_in_set_cmd __ARGS((expand_T *xp, char_u *arg, int opt_flags));
-int ExpandSettings __ARGS((expand_T *xp, regmatch_T *regmatch, int *num_file, char_u ***file));
+int ExpandSettings __ARGS((expand_T *xp, regmatch_T *regmatch, int *num_file,
+                           char_u ***file));
 int ExpandOldSetting __ARGS((int *num_file, char_u ***file));
 int langmap_adjust_mb __ARGS((int c));
 int has_format_option __ARGS((int x));
@@ -62,5 +69,6 @@ int file_ff_differs __ARGS((buf_T *buf, int ignore_empty));
 int check_ff_value __ARGS((char_u *p));
 long get_sw_value __ARGS((buf_T *buf));
 long get_sts_value __ARGS((void));
-void find_mps_values __ARGS((int *initc, int *findc, int *backwards, int switchit));
+void find_mps_values __ARGS((int *initc, int *findc, int *backwards,
+                             int switchit));
 /* vim: set ft=c : */

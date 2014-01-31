@@ -6,7 +6,8 @@ int get_indent_str __ARGS((char_u *ptr, int ts));
 int set_indent __ARGS((int size, int flags));
 int get_number_indent __ARGS((linenr_T lnum));
 int open_line __ARGS((int dir, int flags, int second_line_indent));
-int get_leader_len __ARGS((char_u *line, char_u **flags, int backward, int include_space));
+int get_leader_len __ARGS((char_u *line, char_u **flags, int backward,
+                           int include_space));
 int get_last_leader_offset __ARGS((char_u *line, char_u **flags));
 int plines __ARGS((linenr_T lnum));
 int plines_win __ARGS((win_T *wp, linenr_T lnum, int winheight));
@@ -37,7 +38,8 @@ void appended_lines __ARGS((linenr_T lnum, long count));
 void appended_lines_mark __ARGS((linenr_T lnum, long count));
 void deleted_lines __ARGS((linenr_T lnum, long count));
 void deleted_lines_mark __ARGS((linenr_T lnum, long count));
-void changed_lines __ARGS((linenr_T lnum, colnr_T col, linenr_T lnume, long xtra));
+void changed_lines __ARGS((linenr_T lnum, colnr_T col, linenr_T lnume,
+                           long xtra));
 void unchanged __ARGS((buf_T *buf, int ff));
 void check_status __ARGS((buf_T *buf));
 void change_warning __ARGS((int col));
@@ -55,13 +57,16 @@ void free_users __ARGS((void));
 char_u *expand_env_save __ARGS((char_u *src));
 char_u *expand_env_save_opt __ARGS((char_u *src, int one));
 void expand_env __ARGS((char_u *src, char_u *dst, int dstlen));
-void expand_env_esc __ARGS((char_u *srcp, char_u *dst, int dstlen, int esc, int one, char_u *startstr));
+void expand_env_esc __ARGS((char_u *srcp, char_u *dst, int dstlen, int esc,
+                            int one,
+                            char_u *startstr));
 char_u *vim_getenv __ARGS((char_u *name, int *mustfree));
 void vim_setenv __ARGS((char_u *name, char_u *val));
 char_u *get_env_name __ARGS((expand_T *xp, int idx));
 char_u *get_users __ARGS((expand_T *xp, int idx));
 int match_user __ARGS((char_u *name));
-void home_replace __ARGS((buf_T *buf, char_u *src, char_u *dst, int dstlen, int one));
+void home_replace __ARGS((buf_T *buf, char_u *src, char_u *dst, int dstlen,
+                          int one));
 char_u *home_replace_save __ARGS((buf_T *buf, char_u *src));
 int fullpathcmp __ARGS((char_u *s1, char_u *s2, int checkname));
 char_u *gettail __ARGS((char_u *fname));
@@ -93,12 +98,18 @@ void preserve_exit __ARGS((void));
 int vim_fexists __ARGS((char_u *fname));
 void line_breakcheck __ARGS((void));
 void fast_breakcheck __ARGS((void));
-int expand_wildcards_eval __ARGS((char_u **pat, int *num_file, char_u ***file, int flags));
-int expand_wildcards __ARGS((int num_pat, char_u **pat, int *num_file, char_u ***file, int flags));
+int expand_wildcards_eval __ARGS((char_u **pat, int *num_file, char_u ***file,
+                                  int flags));
+int expand_wildcards __ARGS((int num_pat, char_u **pat, int *num_file, char_u *
+                             **file,
+                             int flags));
 int match_suffix __ARGS((char_u *fname));
-int unix_expandpath __ARGS((garray_T *gap, char_u *path, int wildoff, int flags, int didstar));
+int unix_expandpath __ARGS((garray_T *gap, char_u *path, int wildoff, int flags,
+                            int didstar));
 void remove_duplicates __ARGS((garray_T *gap));
-int gen_expand_wildcards __ARGS((int num_pat, char_u **pat, int *num_file, char_u ***file, int flags));
+int gen_expand_wildcards __ARGS((int num_pat, char_u **pat, int *num_file,
+                                 char_u ***file,
+                                 int flags));
 void addfile __ARGS((garray_T *gap, char_u *f, int flags));
 char_u *get_cmd_output __ARGS((char_u *cmd, char_u *infile, int flags));
 void FreeWild __ARGS((int count, char_u **files));

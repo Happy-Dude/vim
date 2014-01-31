@@ -19,7 +19,8 @@ int profile_passed_limit __ARGS((proftime_T *tm));
 void profile_zero __ARGS((proftime_T *tm));
 void profile_divide __ARGS((proftime_T *tm, int count, proftime_T *tm2));
 void profile_add __ARGS((proftime_T *tm, proftime_T *tm2));
-void profile_self __ARGS((proftime_T *self, proftime_T *total, proftime_T *children));
+void profile_self __ARGS((proftime_T *self, proftime_T *total,
+                          proftime_T *children));
 void profile_get_wait __ARGS((proftime_T *tm));
 void profile_sub_wait __ARGS((proftime_T *tm, proftime_T *tma));
 int profile_equal __ARGS((proftime_T *tm1, proftime_T *tm2));
@@ -43,7 +44,8 @@ int check_changed_any __ARGS((int hidden));
 int check_fname __ARGS((void));
 int buf_write_all __ARGS((buf_T *buf, int forceit));
 int get_arglist __ARGS((garray_T *gap, char_u *str));
-int get_arglist_exp __ARGS((char_u *str, int *fcountp, char_u ***fnamesp, int wig));
+int get_arglist_exp __ARGS((char_u *str, int *fcountp, char_u ***fnamesp,
+                            int wig));
 void set_arglist __ARGS((char_u *str));
 void check_arg_idx __ARGS((win_T *win));
 void ex_args __ARGS((exarg_T *eap));
@@ -60,7 +62,8 @@ void ex_listdo __ARGS((exarg_T *eap));
 void ex_compiler __ARGS((exarg_T *eap));
 void ex_runtime __ARGS((exarg_T *eap));
 int source_runtime __ARGS((char_u *name, int all));
-int do_in_runtimepath __ARGS((char_u *name, int all, void (*callback)(char_u *fname, void *ck), void *cookie));
+int do_in_runtimepath __ARGS((char_u *name, int all, void (*callback)(
+                                  char_u *fname, void *ck), void *cookie));
 void ex_options __ARGS((exarg_T *eap));
 void ex_source __ARGS((exarg_T *eap));
 linenr_T *source_breakpoint __ARGS((void *cookie));

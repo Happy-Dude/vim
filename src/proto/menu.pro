@@ -1,6 +1,7 @@
 /* menu.c */
 void ex_menu __ARGS((exarg_T *eap));
-char_u *set_context_in_menu_cmd __ARGS((expand_T *xp, char_u *cmd, char_u *arg, int forceit));
+char_u *set_context_in_menu_cmd __ARGS((expand_T *xp, char_u *cmd, char_u *arg,
+                                        int forceit));
 char_u *get_menu_name __ARGS((expand_T *xp, int idx));
 char_u *get_menu_names __ARGS((expand_T *xp, int idx));
 char_u *menu_name_skip __ARGS((char_u *name));

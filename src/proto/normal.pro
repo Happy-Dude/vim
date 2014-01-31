@@ -8,7 +8,9 @@ void end_visual_mode __ARGS((void));
 void reset_VIsual_and_resel __ARGS((void));
 void reset_VIsual __ARGS((void));
 int find_ident_under_cursor __ARGS((char_u **string, int find_type));
-int find_ident_at_pos __ARGS((win_T *wp, linenr_T lnum, colnr_T startcol, char_u **string, int find_type));
+int find_ident_at_pos __ARGS((win_T *wp, linenr_T lnum, colnr_T startcol,
+                              char_u **string,
+                              int find_type));
 void clear_showcmd __ARGS((void));
 int add_to_showcmd __ARGS((int c));
 void add_to_showcmd_c __ARGS((int c));
@@ -16,7 +18,8 @@ void push_showcmd __ARGS((void));
 void pop_showcmd __ARGS((void));
 void do_check_scrollbind __ARGS((int check));
 void check_scrollbind __ARGS((linenr_T topline_diff, long leftcol_diff));
-int find_decl __ARGS((char_u *ptr, int len, int locally, int thisblock, int searchflags));
+int find_decl __ARGS((char_u *ptr, int len, int locally, int thisblock,
+                      int searchflags));
 void scroll_redraw __ARGS((int up, long count));
 void handle_tabmenu __ARGS((void));
 void do_nv_ident __ARGS((int c1, int c2));

@@ -88,9 +88,13 @@ int im_is_preediting __ARGS((void));
 void xim_set_status_area __ARGS((void));
 int xim_get_status_area_height __ARGS((void));
 int convert_setup __ARGS((vimconv_T *vcp, char_u *from, char_u *to));
-int convert_setup_ext __ARGS((vimconv_T *vcp, char_u *from, int from_unicode_is_utf8, char_u *to, int to_unicode_is_utf8));
+int convert_setup_ext __ARGS((vimconv_T *vcp, char_u *from,
+                              int from_unicode_is_utf8, char_u *to,
+                              int to_unicode_is_utf8));
 int convert_input __ARGS((char_u *ptr, int len, int maxlen));
-int convert_input_safe __ARGS((char_u *ptr, int len, int maxlen, char_u **restp, int *restlenp));
+int convert_input_safe __ARGS((char_u *ptr, int len, int maxlen, char_u **restp,
+                               int *restlenp));
 char_u *string_convert __ARGS((vimconv_T *vcp, char_u *ptr, int *lenp));
-char_u *string_convert_ext __ARGS((vimconv_T *vcp, char_u *ptr, int *lenp, int *unconvlenp));
+char_u *string_convert_ext __ARGS((vimconv_T *vcp, char_u *ptr, int *lenp,
+                                   int *unconvlenp));
 /* vim: set ft=c : */

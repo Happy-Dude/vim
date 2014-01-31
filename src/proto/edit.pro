@@ -3,11 +3,14 @@ int edit __ARGS((int cmdchar, int startln, long count));
 void edit_putchar __ARGS((int c, int highlight));
 void edit_unputchar __ARGS((void));
 void display_dollar __ARGS((colnr_T col));
-void change_indent __ARGS((int type, int amount, int round, int replaced, int call_changed_bytes));
+void change_indent __ARGS((int type, int amount, int round, int replaced,
+                           int call_changed_bytes));
 void truncate_spaces __ARGS((char_u *line));
 void backspace_until_column __ARGS((int col));
 int vim_is_ctrl_x_key __ARGS((int c));
-int ins_compl_add_infercase __ARGS((char_u *str, int len, int icase, char_u *fname, int dir, int flags));
+int ins_compl_add_infercase __ARGS((char_u *str, int len, int icase, char_u *
+                                    fname, int dir,
+                                    int flags));
 void set_completion __ARGS((colnr_T startcol, list_T *list));
 void ins_compl_show_pum __ARGS((void));
 char_u *find_word_start __ARGS((char_u *ptr));

@@ -6,7 +6,8 @@ int prt_use_number __ARGS((void));
 int prt_get_unit __ARGS((int idx));
 void ex_hardcopy __ARGS((exarg_T *eap));
 void mch_print_cleanup __ARGS((void));
-int mch_print_init __ARGS((prt_settings_T *psettings, char_u *jobname, int forceit));
+int mch_print_init __ARGS((prt_settings_T *psettings, char_u *jobname,
+                           int forceit));
 int mch_print_begin __ARGS((prt_settings_T *psettings));
 void mch_print_end __ARGS((prt_settings_T *psettings));
 int mch_print_end_page __ARGS((void));

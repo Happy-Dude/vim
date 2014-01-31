@@ -19,7 +19,9 @@ void status_redraw_all __ARGS((void));
 void status_redraw_curbuf __ARGS((void));
 void redraw_statuslines __ARGS((void));
 void win_redraw_last_status __ARGS((frame_T *frp));
-void win_redr_status_matches __ARGS((expand_T *xp, int num_matches, char_u **matches, int match, int showtail));
+void win_redr_status_matches __ARGS((expand_T *xp, int num_matches, char_u *
+                                     *matches, int match,
+                                     int showtail));
 void win_redr_status __ARGS((win_T *wp));
 int stl_connected __ARGS((win_T *wp));
 int get_keymap_str __ARGS((win_T *wp, char_u *buf, int len));
@@ -29,8 +31,11 @@ void screen_puts __ARGS((char_u *text, int row, int col, int attr));
 void screen_puts_len __ARGS((char_u *text, int len, int row, int col, int attr));
 void screen_stop_highlight __ARGS((void));
 void reset_cterm_colors __ARGS((void));
-void screen_draw_rectangle __ARGS((int row, int col, int height, int width, int invert));
-void screen_fill __ARGS((int start_row, int end_row, int start_col, int end_col, int c1, int c2, int attr));
+void screen_draw_rectangle __ARGS((int row, int col, int height, int width,
+                                   int invert));
+void screen_fill __ARGS((int start_row, int end_row, int start_col, int end_col,
+                         int c1, int c2,
+                         int attr));
 void check_for_delay __ARGS((int check_msg_scroll));
 int screen_valid __ARGS((int doclear));
 void screenalloc __ARGS((int doclear));
@@ -40,10 +45,15 @@ int can_clear __ARGS((char_u *p));
 void screen_start __ARGS((void));
 void windgoto __ARGS((int row, int col));
 void setcursor __ARGS((void));
-int win_ins_lines __ARGS((win_T *wp, int row, int line_count, int invalid, int mayclear));
-int win_del_lines __ARGS((win_T *wp, int row, int line_count, int invalid, int mayclear));
-int screen_ins_lines __ARGS((int off, int row, int line_count, int end, win_T *wp));
-int screen_del_lines __ARGS((int off, int row, int line_count, int end, int force, win_T *wp));
+int win_ins_lines __ARGS((win_T *wp, int row, int line_count, int invalid,
+                          int mayclear));
+int win_del_lines __ARGS((win_T *wp, int row, int line_count, int invalid,
+                          int mayclear));
+int screen_ins_lines __ARGS((int off, int row, int line_count, int end,
+                             win_T *wp));
+int screen_del_lines __ARGS((int off, int row, int line_count, int end,
+                             int force,
+                             win_T *wp));
 int showmode __ARGS((void));
 void unshowmode __ARGS((int force));
 void get_trans_bufname __ARGS((buf_T *buf));

@@ -6,7 +6,8 @@ void ex_retab __ARGS((exarg_T *eap));
 int do_move __ARGS((linenr_T line1, linenr_T line2, linenr_T dest));
 void ex_copy __ARGS((linenr_T line1, linenr_T line2, linenr_T n));
 void free_prev_shellcmd __ARGS((void));
-void do_bang __ARGS((int addr_count, exarg_T *eap, int forceit, int do_in, int do_out));
+void do_bang __ARGS((int addr_count, exarg_T *eap, int forceit, int do_in,
+                     int do_out));
 void do_shell __ARGS((char_u *cmd, int flags));
 char_u *make_filter_cmd __ARGS((char_u *cmd, char_u *itmp, char_u *otmp));
 void append_redir __ARGS((char_u *buf, int buflen, char_u *opt, char_u *fname));
@@ -24,12 +25,18 @@ void ex_file __ARGS((exarg_T *eap));
 void ex_update __ARGS((exarg_T *eap));
 void ex_write __ARGS((exarg_T *eap));
 int do_write __ARGS((exarg_T *eap));
-int check_overwrite __ARGS((exarg_T *eap, buf_T *buf, char_u *fname, char_u *ffname, int other));
+int check_overwrite __ARGS((exarg_T *eap, buf_T *buf, char_u *fname, char_u *
+                            ffname,
+                            int other));
 void ex_wnext __ARGS((exarg_T *eap));
 void do_wqall __ARGS((exarg_T *eap));
 int not_writing __ARGS((void));
-int getfile __ARGS((int fnum, char_u *ffname, char_u *sfname, int setpm, linenr_T lnum, int forceit));
-int do_ecmd __ARGS((int fnum, char_u *ffname, char_u *sfname, exarg_T *eap, linenr_T newlnum, int flags, win_T *oldwin));
+int getfile __ARGS((int fnum, char_u *ffname, char_u *sfname, int setpm,
+                    linenr_T lnum,
+                    int forceit));
+int do_ecmd __ARGS((int fnum, char_u *ffname, char_u *sfname, exarg_T *eap,
+                    linenr_T newlnum, int flags,
+                    win_T *oldwin));
 void ex_append __ARGS((exarg_T *eap));
 void ex_change __ARGS((exarg_T *eap));
 void ex_z __ARGS((exarg_T *eap));
@@ -46,7 +53,8 @@ int prepare_tagpreview __ARGS((int undo_sync));
 void ex_help __ARGS((exarg_T *eap));
 char_u *check_help_lang __ARGS((char_u *arg));
 int help_heuristic __ARGS((char_u *matched_string, int offset, int wrong_case));
-int find_help_tags __ARGS((char_u *arg, int *num_matches, char_u ***matches, int keep_lang));
+int find_help_tags __ARGS((char_u *arg, int *num_matches, char_u ***matches,
+                           int keep_lang));
 void fix_help_buffer __ARGS((void));
 void ex_exusage __ARGS((exarg_T *eap));
 void ex_viusage __ARGS((exarg_T *eap));

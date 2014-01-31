@@ -30,7 +30,9 @@ void free_all_mem __ARGS((void));
 char_u *vim_strsave __ARGS((char_u *string));
 char_u *vim_strnsave __ARGS((char_u *string, int len));
 char_u *vim_strsave_escaped __ARGS((char_u *string, char_u *esc_chars));
-char_u *vim_strsave_escaped_ext __ARGS((char_u *string, char_u *esc_chars, int cc, int bsl));
+char_u *vim_strsave_escaped_ext __ARGS((char_u *string, char_u *esc_chars,
+                                        int cc,
+                                        int bsl));
 int csh_like_shell __ARGS((void));
 char_u *vim_strsave_shellescape __ARGS((char_u *string, int do_special));
 char_u *vim_strsave_up __ARGS((char_u *string));
@@ -42,7 +44,8 @@ void copy_chars __ARGS((char_u *ptr, size_t count, int c));
 void del_trailing_spaces __ARGS((char_u *ptr));
 void vim_strncpy __ARGS((char_u *to, char_u *from, size_t len));
 void vim_strcat __ARGS((char_u *to, char_u *from, size_t tosize));
-int copy_option_part __ARGS((char_u **option, char_u *buf, int maxlen, char *sep_chars));
+int copy_option_part __ARGS((char_u **option, char_u *buf, int maxlen,
+                             char *sep_chars));
 void vim_free __ARGS((void *x));
 int vim_stricmp __ARGS((char *s1, char *s2));
 int vim_strnicmp __ARGS((char *s1, char *s2, size_t len));
@@ -64,7 +67,8 @@ int simplify_key __ARGS((int key, int *modifiers));
 int handle_x_keys __ARGS((int key));
 char_u *get_special_key_name __ARGS((int c, int modifiers));
 int trans_special __ARGS((char_u **srcp, char_u *dst, int keycode));
-int find_special_key __ARGS((char_u **srcp, int *modp, int keycode, int keep_x_key));
+int find_special_key __ARGS((char_u **srcp, int *modp, int keycode,
+                             int keep_x_key));
 int extract_modifiers __ARGS((int key, int *modp));
 int find_special_key_in_table __ARGS((int c));
 int get_special_key_code __ARGS((char_u *name));
@@ -94,14 +98,23 @@ void crypt_decode __ARGS((char_u *ptr, long len));
 void crypt_init_keys __ARGS((char_u *passwd));
 void free_crypt_key __ARGS((char_u *key));
 char_u *get_crypt_key __ARGS((int store, int twice));
-void *vim_findfile_init __ARGS((char_u *path, char_u *filename, char_u *stopdirs, int level, int free_visited, int find_what, void *search_ctx_arg, int tagfile, char_u *rel_fname));
+void *vim_findfile_init __ARGS((char_u *path, char_u *filename, char_u *
+                                stopdirs, int level, int free_visited,
+                                int find_what, void *search_ctx_arg,
+                                int tagfile,
+                                char_u *rel_fname));
 char_u *vim_findfile_stopdir __ARGS((char_u *buf));
 void vim_findfile_cleanup __ARGS((void *ctx));
 char_u *vim_findfile __ARGS((void *search_ctx_arg));
 void vim_findfile_free_visited __ARGS((void *search_ctx_arg));
-char_u *find_file_in_path __ARGS((char_u *ptr, int len, int options, int first, char_u *rel_fname));
-char_u *find_directory_in_path __ARGS((char_u *ptr, int len, int options, char_u *rel_fname));
-char_u *find_file_in_path_option __ARGS((char_u *ptr, int len, int options, int first, char_u *path_option, int find_what, char_u *rel_fname, char_u *suffixes));
+char_u *find_file_in_path __ARGS((char_u *ptr, int len, int options, int first,
+                                  char_u *rel_fname));
+char_u *find_directory_in_path __ARGS((char_u *ptr, int len, int options,
+                                       char_u *rel_fname));
+char_u *find_file_in_path_option __ARGS((char_u *ptr, int len, int options,
+                                         int first, char_u *path_option,
+                                         int find_what, char_u *rel_fname,
+                                         char_u *suffixes));
 int vim_chdir __ARGS((char_u *new_dir));
 int get_user_name __ARGS((char_u *buf, int len));
 void sort_strings __ARGS((char_u **files, int count));

@@ -1,9 +1,16 @@
 /* ex_docmd.c */
 void do_exmode __ARGS((int improved));
 int do_cmdline_cmd __ARGS((char_u *cmd));
-int do_cmdline __ARGS((char_u *cmdline, char_u *(*fgetline)(int, void *, int), void *cookie, int flags));
-int getline_equal __ARGS((char_u *(*fgetline)(int, void *, int), void *cookie, char_u *(*func)(int, void *, int)));
-void *getline_cookie __ARGS((char_u *(*fgetline)(int, void *, int), void *cookie));
+int do_cmdline __ARGS((char_u *cmdline, char_u *
+                       (*fgetline)(int, void *, int), void *cookie,
+                       int flags));
+int getline_equal __ARGS((char_u *
+                          (*fgetline)(int, void *,
+                                      int), void *cookie, char_u *
+                          (*func)(int, void *,
+                                  int)));
+void *getline_cookie __ARGS((char_u *(*fgetline)(int, void *, int),
+                             void *cookie));
 int checkforcmd __ARGS((char_u **pp, char *cmd, int len));
 int modifier_len __ARGS((char_u *cmd));
 int cmd_exists __ARGS((char_u *name));
@@ -22,7 +29,8 @@ char_u *get_user_commands __ARGS((expand_T *xp, int idx));
 char_u *get_user_cmd_flags __ARGS((expand_T *xp, int idx));
 char_u *get_user_cmd_nargs __ARGS((expand_T *xp, int idx));
 char_u *get_user_cmd_complete __ARGS((expand_T *xp, int idx));
-int parse_compl_arg __ARGS((char_u *value, int vallen, int *complp, long *argt, char_u **compl_arg));
+int parse_compl_arg __ARGS((char_u *value, int vallen, int *complp, long *argt,
+                            char_u **compl_arg));
 void not_exiting __ARGS((void));
 void tabpage_close __ARGS((int forceit));
 void tabpage_close_other __ARGS((tabpage_T *tp, int forceit));
@@ -33,7 +41,9 @@ void alist_init __ARGS((alist_T *al));
 void alist_unlink __ARGS((alist_T *al));
 void alist_new __ARGS((void));
 void alist_expand __ARGS((int *fnum_list, int fnum_len));
-void alist_set __ARGS((alist_T *al, int count, char_u **files, int use_curbuf, int *fnum_list, int fnum_len));
+void alist_set __ARGS((alist_T *al, int count, char_u **files, int use_curbuf,
+                       int *fnum_list,
+                       int fnum_len));
 void alist_add __ARGS((alist_T *al, char_u *fname, int set_fnum));
 void alist_slash_adjust __ARGS((void));
 void ex_splitview __ARGS((exarg_T *eap));
@@ -48,7 +58,9 @@ FILE *open_exfile __ARGS((char_u *fname, int forceit, char *mode));
 void update_topline_cursor __ARGS((void));
 void exec_normal_cmd __ARGS((char_u *cmd, int remap, int silent));
 int find_cmdline_var __ARGS((char_u *src, int *usedlen));
-char_u *eval_vars __ARGS((char_u *src, char_u *srcstart, int *usedlen, linenr_T *lnump, char_u **errormsg, int *escaped));
+char_u *eval_vars __ARGS((char_u *src, char_u *srcstart, int *usedlen,
+                          linenr_T *lnump, char_u **errormsg,
+                          int *escaped));
 char_u *expand_sfile __ARGS((char_u *arg));
 int put_eol __ARGS((FILE *fd));
 int put_line __ARGS((FILE *fd, char *s));

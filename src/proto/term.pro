@@ -52,8 +52,11 @@ char_u *find_termcode __ARGS((char_u *name));
 char_u *get_termcode __ARGS((int i));
 void del_termcode __ARGS((char_u *name));
 void set_mouse_topline __ARGS((win_T *wp));
-int check_termcode __ARGS((int max_offset, char_u *buf, int bufsize, int *buflen));
-char_u *replace_termcodes __ARGS((char_u *from, char_u **bufp, int from_part, int do_lt, int special));
+int check_termcode __ARGS((int max_offset, char_u *buf, int bufsize,
+                           int *buflen));
+char_u *replace_termcodes __ARGS((char_u *from, char_u **bufp, int from_part,
+                                  int do_lt,
+                                  int special));
 int find_term_bykeys __ARGS((char_u *src));
 void show_termcodes __ARGS((void));
 int show_one_termcode __ARGS((char_u *name, char_u *code, int printit));
